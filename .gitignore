@@ -11,8 +11,9 @@ application/.htaccess
 # Can also ignore all directories and files in a directory.
 tmp/**/*
 
-#ignore wordpress uploads directory
+#ignore wordpress uploads and themes directory
 application/wp-content/uploads/
+application/wp-content/themes/
 
 # ignore cruise,local, and production files
 application/wp-config-prod.php
