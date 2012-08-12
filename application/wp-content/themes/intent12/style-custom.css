@@ -1,0 +1,29 @@
+/* ---- Place your custom styles below ---- */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #072A5E;
+}
+
+h3.benefits {
+  color: #072A5E;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+hr.benefits_line {
+  
+  color: #CC3232;
+  background-color: #CC3232;
+  height: 2px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.style_bold {
+  color: #072A5E;
+}
+
+#tagline {
+  margin-left: -230px;
+  margin-top: 90px;
+}

@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------------------- *
+ *  Internet Explorer 8 Fixes
+/* ------------------------------------------------------------------------- */
+
+/* semi-transparent rgba values changed to png */
+
+/* opacity: 0.90 */
+.flex-direction-nav li:hover { background: url(img/ie/opacity-90.png) repeat; }
+/* opacity: 0.85 */
+#page-inner.box { background: url(img/ie/opacity-85.png) repeat; }
+/* opacity: 0.80 */
+.caption-bar,
+a.flex-caption:hover,
+.flex-direction-nav li { background: url(img/ie/opacity-80.png) repeat; }
+/* opacity: 0.70 */
+#header-social li a:hover span.icon-title,
+#page-image-text span.description i { background: url(img/ie/opacity-70.png) repeat; }
+/* opacity: 0.65 */
+a.item-large span.featured-title,
+.flex-caption { background: url(img/ie/opacity-65.png) repeat; }
+/* opacity: 0.40 */
+#footer-social li a:hover { background: url(img/ie/opacity-40.png) repeat; }
+/* opacity: 0.30 */
+#footer-social li a { background: url(img/ie/opacity-30.png) repeat; }
+/* opacity: 0.07 */
+#header-social li a,
+ul#work-filter li a,
+ul#work-size li a,
+ul#work-pagination li a { background: url(img/ie/opacity-07.png) repeat; }
+/* opacity: 0.05 */
+#header-social li a:hover { background: url(img/ie/opacity-05.png) repeat; }
+/* opacity: 0.07 light */
+#footer a#to-top { background: url(img/ie/opacity-07-light.png) repeat; }
+
+/* hide zoom, then show on hover */
+.zoom,
+.entry-thumbnail a .zoom,
+a.item-small span.zoom,
+.work-item .zoom { display: none; }
+
+.entry-thumbnail a:hover .zoom,
+a.item-small:hover .zoom,
+.work-item a.work-thumbnail:hover .zoom { display: block; } 
+
+.isotope-hidden { display: none; }  
+

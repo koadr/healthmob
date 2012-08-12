@@ -1,0 +1,7 @@
+/* Note : Do not place custom styles in this stylesheet */
+
+#logo a, #tagline, #nav li a { }
+#header { background-repeat: repeat; }
+#subheader { background-repeat: repeat; }
+body { background-repeat: repeat; }
+#footer { background-repeat: repeat; }

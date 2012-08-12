@@ -13,7 +13,6 @@ tmp/**/*
 
 #ignore wordpress uploads and themes directory
 application/wp-content/uploads/
-application/wp-content/themes/
 
 # ignore cruise,local, and production files
 application/wp-config-prod.php
