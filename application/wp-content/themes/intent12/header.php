@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html <?php language_attributes(); ?>> 
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width">
@@ -20,27 +20,55 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
+
 <div id="wrap">
-	
+
 	<header id="header">
 		<div id="header-inner" class="container fix">
 			<?php bandit::site_name(); ?>
 			<?php bandit::site_desc(); ?>
-			
+
 			<?php if(!bandit::get_option('header-disable-search')): ?>
 			<div id="header-search" class="fix">
 				<?php get_search_form(); ?>
 			</div>
 			<?php endif; ?>
-			
+
 			<?php bandit::social_media_links(array('id'=>'header-social')); ?>
-			
+
 			<?php wp_nav_menu(array('container'=>'nav','container_id'=>'header-nav','container_class'=>'fix','theme_location'=>'bandit_nav_header','menu_id'=>'nav','fallback_cb'=>FALSE)); ?>
-			
+
 			<?php if(bandit::breadcrumbs_enabled()): ?>
 				<div id="header-breadcrumbs">
-					<?php bandit::breadcrumbs(); ?>
+					<?php //bandit::breadcrumbs(); ?>
+					<?php
+						if(is_page(array('Individuals','Institutions','Manufacturers')))
+							{
+								?> <ul id="breadcrumbs" class="fix">
+									 		<li class="first">
+									 			<a class="home" href="<?php echo home_url(); ?>">Home</a>
+									 		</li>
+									 		<li><i><a href="<?php echo home_url("individuals"); ?>">Individuals</a></i></li>
+									 		<li><i><a href="<?php echo home_url("institution"); ?>">Institutions</a></i></li>
+									 		<li><i><a href="<?php echo home_url("manufacturers"); ?>">Manufacturers</a></i></li>
+									 	</ul>
+								<?php
+							}
+						elseif (is_page(array('BioCloud Apps','BioCloud MMS', 'BioTorr Chipset')))
+						{
+							?> <ul id="breadcrumbs" class="fix">
+									 		<li class="first">
+									 			<a class="home" href="<?php echo home_url(); ?>">Home</a>
+									 		</li>
+									 		<li><i><a href="<?php echo home_url("biocloud-mms"); ?>">BioCloud MMS</a></i></li>
+									 		<li><i><a href="<?php echo home_url("biocloud-apps"); ?>">BioCloud Apps</a></i></li>
+									 		<li><i><a href="<?php echo home_url("biotorr-chipset"); ?>">BioTorr Chipset</a></i></li>
+									</ul>
+							<?php
+						}
+					?>
+
+
 				</div>
 			<?php endif; ?>
 		</div>
